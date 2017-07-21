@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>POST TEST PAGE</title>
+</head>
+<body>
+    <h3>This is a form test page!</h3>
+    <p>You can search anything you want here.</p>
+    <form action="/search-post" method="post">
+        {% csrf_token %}
+        <input type="text" name="data">
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <p>{{ rlt }}</p>
+</body>
+</html>
+
